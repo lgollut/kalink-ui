@@ -1,4 +1,4 @@
-import { boxStyles } from "./box.css";
+import { boxStyles } from './box.css';
 
 export type BoxProps = {
   msg: string;

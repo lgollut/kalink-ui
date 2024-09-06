@@ -1,12 +1,12 @@
-const { resolve } = require("node:path");
+const { resolve } = require('node:path');
 
-const project = resolve(process.cwd(), "tsconfig.json");
+const project = resolve(process.cwd(), 'tsconfig.json');
 
 module.exports = {
   extends: [
-    "@vercel/style-guide/eslint/browser",
-    "@vercel/style-guide/eslint/typescript",
-    "@vercel/style-guide/eslint/react",
+    '@vercel/style-guide/eslint/browser',
+    '@vercel/style-guide/eslint/typescript',
+    '@vercel/style-guide/eslint/react',
   ].map(require.resolve),
 
   parserOptions: {
@@ -18,39 +18,39 @@ module.exports = {
   },
 
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       typescript: {
         project,
       },
     },
   },
 
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css"],
+  ignorePatterns: ['node_modules/', 'dist/', '.eslintrc.js', '**/*.css'],
 
   rules: {
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
 
-    "import/order": [
-      "error",
+    'import/order': [
+      'error',
       {
         groups: [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
-          "object",
-          "type",
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
         ],
         pathGroups: [
           {
-            pattern: "@/**",
-            group: "parent",
+            pattern: '@/**',
+            group: 'parent',
           },
         ],
-        "newlines-between": "always",
-        alphabetize: { order: "asc", caseInsensitive: true },
+        'newlines-between': 'always',
+        alphabetize: { order: 'asc', caseInsensitive: true },
       },
     ],
   },

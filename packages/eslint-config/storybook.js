@@ -1,16 +1,16 @@
-const { resolve } = require("node:path");
+const { resolve } = require('node:path');
 
-const project = resolve(process.cwd(), "tsconfig.json");
+const project = resolve(process.cwd(), 'tsconfig.json');
 
 module.exports = {
   extends: [
-    "plugin:storybook/recommended",
-    "plugin:mdx/recommended",
+    'plugin:storybook/recommended',
+    'plugin:mdx/recommended',
     ...[
-      "@vercel/style-guide/eslint/node",
-      "@vercel/style-guide/eslint/typescript",
-      "@vercel/style-guide/eslint/browser",
-      "@vercel/style-guide/eslint/react",
+      '@vercel/style-guide/eslint/node',
+      '@vercel/style-guide/eslint/typescript',
+      '@vercel/style-guide/eslint/browser',
+      '@vercel/style-guide/eslint/react',
     ].map(require.resolve),
   ],
 
@@ -18,7 +18,7 @@ module.exports = {
     project,
   },
 
-  plugins: ["only-warn"],
+  plugins: ['only-warn'],
 
   globals: {
     React: true,
@@ -26,15 +26,15 @@ module.exports = {
   },
 
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       typescript: {
         project,
       },
     },
   },
-  ignorePatterns: ["node_modules/", "dist/"],
+  ignorePatterns: ['node_modules/', 'dist/'],
 
   rules: {
-    "import/no-default-export": "off",
+    'import/no-default-export': 'off',
   },
 };

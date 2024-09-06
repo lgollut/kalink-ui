@@ -1,12 +1,12 @@
-import { Box } from "./box";
+import { Box } from './box';
 
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: "Box",
+  title: 'Box',
   component: Box,
   args: {
-    msg: "Box label",
+    msg: 'Box label',
   },
 } satisfies Meta<typeof Box>;
 
