@@ -1,10 +1,11 @@
-import { defineConfig } from "tsup";
+import { defineConfig } from 'tsup';
 
 export default defineConfig((options) => ({
-  entryPoints: ["src/**/!(*.(style|test|spec)).ts"],
-  format: ["esm"],
+  entry: ['src/**/!(*.(style|css|test|spec|stories)).(ts|tsx)'],
+  format: ['esm'],
   dts: true,
   sourcemap: true,
-  external: ["react"],
+  external: ['react', '@vanilla-extract/css'],
+  clean: true,
   ...options,
 }));
