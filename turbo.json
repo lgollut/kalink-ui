@@ -9,6 +9,15 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "lint:fix": {
+      "dependsOn": ["^lint:fix"]
+    },
+    "validate": {
+      "dependsOn": ["^validate"]
+    },
+    "validate:fix": {
+      "dependsOn": ["^validate:fix"]
+    },
     "dev": {
       "cache": false,
       "persistent": true

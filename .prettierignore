@@ -1,0 +1,9 @@
+**/node_modules/**
+**/dist/**
+**/lib/**
+**/build/**
+**/.turbo/**
+.prettierignore
+.npmrc
+.gitignore
+pnpm-lock.yaml
