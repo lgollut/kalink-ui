@@ -1,4 +1,6 @@
-/** @type {import("eslint").Linter.Config} */
+// @ts-check
+
+/** @type {import("eslint").Linter.BaseConfig} */
 module.exports = {
-  extends: ["@repo/eslint-config/storybook.js"],
+  extends: ["@kalink-ui/eslint-config/storybook.js"],
 };
